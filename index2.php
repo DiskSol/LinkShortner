@@ -49,10 +49,10 @@ function ClipBoard()
             <?php
             if(isset($_GET['yes'])) {
 
-              $db_server = 'linkshortnertest1.mysql.database.azure.com';
-              $db_user_name = 'linktest1@linkshortnertest1';
-              $db_password = 'Link.2018';
-              $db_name = 'new';
+              $db_server = '127.0.0.1';
+  	      $db_user_name = 'azure@localhost';
+  	      $db_password = '';
+  	      $db_name = 'newdatabase';
               $suff1 =$_SESSION ['user'];
               @ $db = mysqli_connect($db_server,$db_user_name,$db_password,$db_name) or die("unable to connect to database");
 
