@@ -14,10 +14,10 @@ if (isset($_POST['curl'])) {
 
 else{
 
-  $db_server = 'localhost';
-  $db_user_name = 'root';
-  $db_password = '';
-  $db_name = 'LinkShortner';
+  $db_server = 'linkshortnertest1.mysql.database.azure.com';
+  $db_user_name = 'linktest1@linkshortnertest1';
+  $db_password = 'Link.2018';
+  $db_name = 'new';
   $_SESSION['count']=0;
   @ $db = mysqli_connect($db_server,$db_user_name,$db_password,$db_name) or die("unable to connect to database");
 
