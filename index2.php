@@ -51,7 +51,7 @@ function ClipBoard()
 
               $connectstr_dbhost = '127.0.0.1:53676';
 $connectstr_dbname = 'newdatabase';
-$connectstr_dbusername = 'azure@localhost';
+$connectstr_dbusername = 'root@localhost';
 $connectstr_dbpassword = 'YES';
 
 foreach ($_SERVER as $key => $value) {
@@ -74,8 +74,8 @@ if (!$link) {
     exit;
 }
 
-echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+//echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+//echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
 mysqli_close($link);
 		    
