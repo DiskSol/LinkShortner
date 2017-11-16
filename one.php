@@ -14,10 +14,10 @@ if (isset($_POST['curl'])) {
 
 else{
 
-    $connectstr_dbhost = 'localhost';
+    $connectstr_dbhost = '127.0.0.1:50029';
 $connectstr_dbname = 'newdatabase';
 $connectstr_dbusername = 'azure';
-$connectstr_dbpassword = 'MyNewPass';
+$connectstr_dbpassword = 'Link.2018';
 
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
