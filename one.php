@@ -16,7 +16,7 @@ else{
 
  $connectstr_dbhost = '127.0.0.1:53676';
 $connectstr_dbname = 'newdatabase';
-$connectstr_dbusername = 'azure@localhost';
+$connectstr_dbusername = 'root@localhost';
 $connectstr_dbpassword = 'YES';
 
 foreach ($_SERVER as $key => $value) {
