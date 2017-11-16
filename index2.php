@@ -51,8 +51,8 @@ function ClipBoard()
 
               $connectstr_dbhost = 'localhost';
 $connectstr_dbname = 'newdatabase';
-$connectstr_dbusername = 'root';
-$connectstr_dbpassword = 'Yes';
+$connectstr_dbusername = 'azure';
+$connectstr_dbpassword = '';
 
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
