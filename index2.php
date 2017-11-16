@@ -49,49 +49,13 @@ function ClipBoard()
             <?php
             if(isset($_GET['yes'])) {
 
-              $connectstr_dbhost = '127.0.0.1:50029';
-$connectstr_dbname = 'newdatabase';
-$connectstr_dbusername = 'azure';
-$connectstr_dbpassword = 'Link.2018';
+              $db_server = 'localhost';
+              $db_user_name = 'user';
+              $db_password = '123456';
+              $db_name = 'url';
+              $suff1 =$_SESSION ['user'];
+              @ $db = mysqli_connect($db_server,$db_user_name,$db_password,$db_name) or die("unable to connect to database");
 
-foreach ($_SERVER as $key => $value) {
-    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
-        continue;
-    }
-    
-    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-}
-
-$link = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname);
-
-if (!$link) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
-
-//echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-//echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
-
-//mysqli_close($link);
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		    
               $query="select time from t1 where suffix='$suff1'";
               $result=mysqli_query($db,$query) or die("error");
               $row=mysqli_fetch_array($result);
