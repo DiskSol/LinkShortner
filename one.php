@@ -14,7 +14,7 @@ if (isset($_POST['curl'])) {
 
 else{
 
-    $connectstr_dbhost = '127.0.0.1:50029';
+    $connectstr_dbhost = '';
 $connectstr_dbname = 'newdatabase';
 $connectstr_dbusername = 'azure';
 $connectstr_dbpassword = 'Link.2018';
