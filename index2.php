@@ -49,10 +49,10 @@ function ClipBoard()
             <?php
             if(isset($_GET['yes'])) {
 
-              $connectstr_dbhost = 'localhost';
+              $connectstr_dbhost = '127.0.0.1:53676';
 $connectstr_dbname = 'newdatabase';
-$connectstr_dbusername = 'azure';
-$connectstr_dbpassword = '';
+$connectstr_dbusername = 'azure@localhost';
+$connectstr_dbpassword = 'YES';
 
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
